@@ -1,0 +1,4 @@
+Borland Pascal  Version 7.0  Copyright (c) 1983,92 Borland International
+D:\MYPROG.PAS(1)D:\MYPROG.PAS(1)D:\MYPROG.PAS(2): Error 15: File not found (UNIT1.TPU).
+uses Unit1, Unit2;	{используемые модули}
+                 ^

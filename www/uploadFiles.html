@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<title>Загрузка файла *.pas на сервер</title>
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body onLoad="setValuesSelectProblems()">
+	<h1>Загрузка файла *.pas на сервер. Испольлуется кодировка программы Turbo Pascal - DOS (CP866)</h1>
+		<form action="php/action_upload_pas.php" method="post" enctype="multipart/form-data">	
+		  <div id="selects">
+				<div class="selectItem">
+				  <h3>Номер задания</h3>
+				  <select id="problem"></select>
+				</div>
+				<div class="selectItem">
+					<h3>Уровень</h3>
+				  <select id="level"></select>
+				</div>
+				<div class="selectItem">
+					<h3>Номер варианта</h3>
+				  <select id="variant"></select>
+				</div>
+			</div>
+			<h2>Код программы *.pas</h2>
+			<input name="uploadpas" type="file" accept="text/pascal" accept="" onFocus="this.form.send.disabled=0; this.form.upload_module[].disabled=0">
+			<h2>Модули к программе *.tpu</h2>
+			<input type="file" min="1" max="9999" name="upload_module[]" multiple>
+			<br>
+			<input name="send" type="submit" value="Загрузить" >
+		</form>
+	</body>
+</html>

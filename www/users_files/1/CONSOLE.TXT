@@ -1,0 +1,3 @@
+Borland Pascal  Version 7.0  Copyright (c) 1983,92 Borland International
+D:\MYPROG.PAS(1)D:\MYPROG.PAS(1)D:\MYPROG.PAS(8)D:\MYPROG.PAS(8)
+8 lines, 0.1 seconds, 4480 bytes code, 702 bytes data.

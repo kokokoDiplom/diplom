@@ -1,0 +1,1 @@
+Z:\home\TestingSystem\www\DOSBox\DOSBox.exe -с -noconsole -c "mount c Z:\home\TestingSystem\www\Pascal" -c "mount d Z:\home\TestingSystem\www\users_files\2" -с -securemode -c c:\ -c "bpc.exe d:\myprog.pas /Ud:\ > d:\console.txt" -c exit

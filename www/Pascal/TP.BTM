@@ -1,0 +1,2 @@
+@echo off
+X:\BP\BP.EXE /CY:\SCHOOL.PAK\BP.TP %&
