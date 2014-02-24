@@ -12,9 +12,9 @@ body {
 
 .selectItem{
 	float: left;
-	margin-left: 30px;
-	margin-right: 30px;
-	width: 300 px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100 px;
 }
 
 #selects{

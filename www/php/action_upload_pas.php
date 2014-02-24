@@ -2,9 +2,10 @@
 	//echo '<code><pre>';
 	//print_r($_FILES);
 	//echo '</pre></code></br>';
-	$_POST["user_id"]=123;//test
-	@mkdir("users_files ", 0777);
-	$upload_dir = "users_files\\".$_POST["user_id"];
+	$_POST["user_id"]='1';//test
+	$upload_dir = "Z:\home\TestingSystem\www\users_files\\";
+	@mkdir($upload_dir, 0777);
+	$upload_dir = "Z:\home\TestingSystem\www\users_files\\".$_POST["user_id"];
 	@mkdir($upload_dir, 0777);
 	$uploadpas = $upload_dir ."\\". basename($_FILES['uploadpas']['name']);
 	$flag = true;
@@ -32,7 +33,7 @@ if ($flag)
 	$name_file = $_FILES['uploadpas']['name'];
 	rename($upload_dir."\\".$name_file, $upload_dir."\\myprog.pas");
 	//компиляция begin
-	$bat_str = 'Z:\\home\\TestingSystem\\www\\DOSBox\\DOSBox.exe -с -noconsole -c "mount c Z:\\home\\TestingSystem\\www\\Pascal" -c "mount d Z:\\home\\TestingSystem\\www\\'.$upload_dir.'" -с -securemode -c c:\\ -c "bpc.exe d:\\myprog.pas /Ud:\\ > d:\\console.txt" -c exit';
+	$bat_str = 'Z:\home\TestingSystem\www\DOSBox\DOSBox.exe -c "mount d Z:\home\TestingSystem\www\Pascal" -c "mount e '.$upload_dir.'" -securemode -c d:\ -c "bpc.exe e:\myprog.pas /Ue:\ > e:\console.txt" -c exit';
 	file_put_contents ($upload_dir."\\".'compiler.bat', $bat_str);
 	exec($upload_dir."\\".'compiler.bat');	
 	$console_str = file_get_contents ($upload_dir."\\".'console.txt');

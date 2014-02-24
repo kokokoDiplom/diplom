@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<title>Загрузка файла *.pas на сервер</title>
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body>
+	<h1>Загрузка задач и их тестовых наборов на сервер.</h1>
+		<form action="php/action_upload_problems.php" method="post" enctype="multipart/form-data">	
+			<div id="selects">
+			<div class="selectItem">
+			<h3>Номер задания</h3>
+			<input type="text" name="number_problem">
+			</div>
+			<div class="selectItem">
+			<h3>Уровень</h3>
+			<input type="text" name="number_level">
+			</div>
+			<div class="selectItem">
+			<h3>Номер варианта</h3>
+			<input type="text" name="number_variant">
+			</div>
+			</div>
+			<h3>Файл задания</h3>
+			<input type="file" name="upload_text_problem">
+			
+	<p>
+		<input type="radio" name="option1" value="utf-8" checked>Задание с кодировкой utf-8<Br>
+		<input type="radio" name="option1" value="windows-1251">Задание с кодировкой windows-1251<Br>
+	</p>			
+			<h3>Тестовые файлы input</h3>
+			<input type="file" min="1" max="10" name="upload_input[]" multiple>			
+			<h3>Эталонные файлы pattern</h3>
+			<input type="file" min="1" max="10" name="upload_pattern[]" multiple>
+			</br>
+			<input name="send" type="submit" value="Загрузить" >
+		</form>
+	</body>
+</html>
