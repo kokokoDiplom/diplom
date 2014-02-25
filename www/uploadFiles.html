@@ -6,13 +6,13 @@
 		<script src="js/script.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css">
 	</head>
-	<body onLoad="setValuesSelectProblems()">
+	<body onLoad="onLoadFunction()">
 	<h1>Загрузка файла *.pas на сервер. Испольлуется кодировка программы Turbo Pascal - DOS (CP866)</h1>
 		<form action="php/action_upload_pas.php" method="post" enctype="multipart/form-data">	
 		  <div id="selects">
 				<div class="selectItem">
 				  <h3>Номер задания</h3>
-				  <select id="problem" name="problem" onChange="setValuesSelect('level',[document.getElementById('problem').value])"></select>
+				  <select id="problem" name="problem" onChange="changeProblem()"></select>
 				</div>
 				<div class="selectItem">
 					<h3>Уровень</h3>

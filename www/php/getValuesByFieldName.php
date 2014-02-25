@@ -1,8 +1,8 @@
 <?php
   //выбирает значения столбца из таблицы problems для вставки в <SELECT>
   include 'mySqlConnect.php';
-	// $_POST['fieldName']='level';
-	// $_POST['fieldsValues']='2';
+	// $_POST['fieldName']='variant';
+	// $_POST['fieldsValues']='2,2';
 	if (($_POST['fieldName']=='problem')||($_POST['fieldName']=='level')||($_POST['fieldName']=='variant')){
 		if (isset($_POST['fieldsValues'])) {
 			$where=' WHERE ';

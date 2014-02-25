@@ -44,7 +44,12 @@ function setValuesSelect(fieldName, fieldsValues){
 	for (var i=0; i<mass.length; i++) setOption(select, mass[i]);
 }
 
-function setValuesSelectProblems(){
+function changeProblem() {
+	setValuesSelect('level',[document.getElementById('problem').value])
+	setValuesSelect('variant',[document.getElementById('problem').value,document.getElementById('level').value]);
+}
+
+function onLoadFunction(){
   setValuesSelect('problem');
 	setValuesSelect('level',[document.getElementById('problem').value]);
 	setValuesSelect('variant',[document.getElementById('problem').value,document.getElementById('level').value]);
