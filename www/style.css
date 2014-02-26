@@ -21,3 +21,20 @@ body {
   float: none;
 	height: 100px;
 }
+
+.ok{
+	top: 10px;
+	color: green;
+	right: 10px;
+	position: fixed;
+	float: none;
+}
+
+.neok{
+	top: 10px;
+	color: red;
+	right: 10px;
+	position: fixed;
+	float: none;
+}
+

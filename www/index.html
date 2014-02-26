@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<title>Аутентификация</title>
+		<script src="js/script.js"></script>
+		<script>
+			var xmlHTTP = getXmlHttpRequest();//фича для автоперехода для авторизированных пользователей
+			xmlHTTP.open("POST","php/log_in.php",false);
+			xmlHTTP.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xmlHTTP.send('filename='+getFileName());
+			if (xmlHTTP.responseText!=0) window.location='uploadFiles.html';
+		</script>
+	</head>
+	<body>
+		<div class="auth" id="log_in">
+			<h3>Авторизация:</h3>
+			<form method="POST" action="log_in.php">
+				Логин:<br>
+				<input type="text" id="login"><br>
+				Пароль:<br>
+				<input type="password" id="pass"><br>
+				<input type="button" value="Войти" onClick="auth()">
+			</form>
+		</div>
+	</body>
+<html>
