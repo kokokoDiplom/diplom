@@ -72,7 +72,16 @@ function checkAccess(){//проверка доступа
 	// fileName
 	if (xmlHTTP.responseText==0) {
 		window.location='index.html';
-	} else return true;
+	} else {
+		if (xmlHTTP.responseText=='Администратор'){
+			var a = document.createElement('a');
+			var div = document.getElementById('topMenu');
+			a.setAttribute('href','uploadProblems.html');
+			a.innerHTML=' Админка ';
+			div.insertBefore(a,div.lastChild);
+		}
+		return true;
+	}
 }
 
 function auth(){//авторизация

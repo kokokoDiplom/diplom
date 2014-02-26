@@ -40,4 +40,5 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 INSERT INTO `users` (`fam`, `name`, `otch`, `login`, `pass`, `email`, `lvlAccess`, `sost`) VALUES
-('Админов', 'Админ', 'Админович', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'qwe@qwe.qwe', 'Администратор', 'Активен');
+('Админов', 'Админ', 'Админович', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'qwe@qwe.qwe', 'Администратор', 'Активен'),
+('Юзеров', 'Юзер', 'Юзерович', 'user', '12dea96fec20593566ab75692c9949596833adc9', 'eqw@eqw.eqw', 'Пользователь', 'Активен');

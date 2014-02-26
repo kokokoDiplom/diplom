@@ -5,8 +5,10 @@
 		<title>Загрузка файла *.pas на сервер</title>
 		<script src="js/script.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css">
+		<script>checkAccess()</script>
 	</head>
 	<body>
+	<a href='php/log_out.php'><input type='button' value='ВЫХОД' class='but'></a>
 	<h1>Загрузка задач и их тестовых наборов на сервер.</h1>
 		<form action="php/action_upload_problems.php" method="post" enctype="multipart/form-data">	
 			<div id="selects">
